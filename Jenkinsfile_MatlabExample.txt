@@ -1,0 +1,14 @@
+pipeline {
+   agent any
+   tools {
+       matlab 'Matlab R2022a'
+   }
+    stages{
+        stage('Run MATLAB Command') {
+            steps
+            {
+               runMATLABCommand 'etherCATBlockManipulator'
+            }       
+        }                
+    } 
+}
