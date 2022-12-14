@@ -5,8 +5,9 @@ pipeline {
        matlab 'Matlab R2022a'
    }
    environment {
-       // specify Matlab version to use for builds
-       PATH = "C:\\Program Files\\MATLAB\\R2022a\\bin;${PATH}"   // Windows agent
+       echo 'specify Matlab version to use for builds'
+       //PATH = "C:\\Program Files\\MATLAB\\R2022a\\bin;${PATH}"   // Windows agent
+
    }
     stages{
         stage('Build: Run MATLAB Command') {
