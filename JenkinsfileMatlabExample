@@ -8,7 +8,7 @@ pipeline {
         stage('Build: Run MATLAB Commands') {
             steps
             {
-               runMATLABCommand "disp('this is build stage')"
+               //runMATLABCommand "disp('this is build stage')"
                runMATLABCommand 'ver'
                //runMATLABCommand 'addpath("mScripts"), 'etherCATBlockManipulator'
             }       
