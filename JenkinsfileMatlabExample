@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+   agent master
    tools {
        // use Matlab from Jenkins tool settings
        matlab 'Matlab R2022a'
