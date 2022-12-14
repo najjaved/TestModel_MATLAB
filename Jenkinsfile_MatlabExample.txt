@@ -6,17 +6,19 @@ pipeline {
    }
    environment {
        echo 'specify Matlab version to use for builds'
-       //PATH = "C:\\Program Files\\MATLAB\\R2022a\\bin;${PATH}"   // Windows agent
+       //PATH = "C:\\Program Files\\MATLAB\\R2022a\\bin;${PATH}" 
 
    }
     stages{
-        stage('Build: Run MATLAB Command') {
+        stage('Build: Run MATLAB Commands') {
             steps
             {
+               runMATLABCommand "disp('this is build stage')"
+               runMATLABCommand 'ver'
                runMATLABCommand 'addpath("mScripts"), 'etherCATBlockManipulator'
             }       
         } 
-	stage('Run MATLAB Tests') {
+	    stage('Run MATLAB Tests') {
             steps
             {
                 runMATLABTests()
