@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Info Type="StartUp" Visible="0" Icon="" File="utilities/setup_workspace.m" Name="setup_workspace">
+    <Extension Value="a935d1ae-a6a5-4ba2-ad76-2fe5192f407d" Name="StartUpPrev"/>
+</Info>
