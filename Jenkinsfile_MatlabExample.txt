@@ -1,14 +1,25 @@
 pipeline {
    agent any
    tools {
+       // use Matlab from Jenkins tool settings
        matlab 'Matlab R2022a'
    }
+   environment {
+       // specify Matlab version to use for builds
+       PATH = "C:\\Program Files\\MATLAB\\R2022a\\bin;${PATH}"   // Windows agent
+   }
     stages{
-        stage('Run MATLAB Command') {
+        stage('Build: Run MATLAB Command') {
             steps
             {
-               runMATLABCommand 'etherCATBlockManipulator'
+               runMATLABCommand 'addpath("mScripts"), 'etherCATBlockManipulator'
             }       
-        }                
+        } 
+	stage('Run MATLAB Tests') {
+            steps
+            {
+                runMATLABTests()
+            }       
+        }                 
     } 
 }
