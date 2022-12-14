@@ -28,7 +28,7 @@ blockHandle1 = get_param(blockPath1,'Handle');
 set_param(blockHandle1,'rxPdoMapping',['{',mystr1,'}']);
 
 %% update block diagram
-set_param(model,'SimulationCommand','Update');
+set_param(modelName,'SimulationCommand','Update');
 
 % Get a list of block paths and names for the model.
 % find_system(modelName,'Type','Block')

@@ -13,3 +13,6 @@ etherCATmdl_slrealtime_rtw/etherCATmdl
 ReadSystemTime_20b.slx
 slprj/_jitprj/sGbmW4fxBQIS1lMnomxEdbD.l
 Speedgoat_Automation_IO750.xml
+etherCATmdlBasic.slxc
+*.autosave
+slprj/sim/varcache/etherCATmdlBasic/tmwinternal/simulink_cache.xml
