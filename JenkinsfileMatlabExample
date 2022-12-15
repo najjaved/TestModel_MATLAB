@@ -8,11 +8,11 @@ pipeline {
             buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '7', daysToKeepStr: '3', numToKeepStr: '7')
     }
     stages{
-        stage('Build: Run MATLAB Commands') {
+        stage('Build: Run MATLAB Commands and Scripts') {
             steps
             {
                runMATLABCommand 'ver'
-               //runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
+               runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
             }       
         } 
 	    stage('Run MATLAB Tests') {
@@ -31,7 +31,9 @@ pipeline {
 			}
 			failure {
 				echo 'This build failed'
-				mail to: 'najma.javed.temp@lilium.com', subject: 'Pipeline failed', body: "${env.BUILD_URL}"
+				emailext body: "${env.BUILD_URL}"
+				subject: 'Build faileure',
+				to: 'najma.javed.temp@lilium.com'
 			}
 			unstable {
 				echo 'This will run only if the run was marked as unstable'
