@@ -12,7 +12,7 @@ pipeline {
             steps
             {
                runMATLABCommand 'ver'
-               runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
+               //runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
             }       
         } 
 	    stage('Run MATLAB Tests') {
