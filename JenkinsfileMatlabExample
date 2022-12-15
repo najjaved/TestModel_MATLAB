@@ -32,7 +32,7 @@ pipeline {
 			failure {
 				echo 'This build failed'
 				emailext body: "${env.BUILD_URL}"
-				subject: 'Build faileure',
+				subject: 'Build failure',
 				to: 'najma.javed.temp@lilium.com'
 			}
 			unstable {

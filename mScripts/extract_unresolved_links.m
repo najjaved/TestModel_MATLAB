@@ -1,6 +1,7 @@
 
 %modelName = 'ChargingApp';
 modelName = 'etherCATmdlBasic';
+open_system(['models/', modelName]);
 LibrarayNames = '';
 blockPaths = '';
 
