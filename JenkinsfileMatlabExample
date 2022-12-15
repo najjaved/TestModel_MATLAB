@@ -5,7 +5,7 @@ pipeline {
        matlab 'Matlab R2022a'
    }
    options {
-            buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '5', daysToKeepStr: '3', numToKeepStr: '5')
+            buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '7', daysToKeepStr: '3', numToKeepStr: '7')
     }
     stages{
         stage('Build: Run MATLAB Commands') {
