@@ -11,8 +11,7 @@ for ii=1:length(blocks)
     libdata = libinfo(blocks(ii)); % to get information about libraray blocks in a system
     if isempty(libdata.LinkStatus)
         continue;
-    else
-        
+    else        
         if strcmp(libdata.LinkStatus ,'unresolved')
             LibName = libdata.Library;
             if ismember(LibName,LibrarayNames)
