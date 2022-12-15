@@ -12,7 +12,8 @@ pipeline {
             steps
             {
                runMATLABCommand 'ver'
-               runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
+               runMATLABCommand 'addpath("utilities"), 'setup_workspace'
+               // runMATLABCommand 'addpath("mScripts"), 'extract_unresolved_links'
             }       
         } 
 	    stage('Run MATLAB Tests') {
