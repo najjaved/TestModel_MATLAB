@@ -1,5 +1,6 @@
 
-modelName = 'ChargingApp';
+%modelName = 'ChargingApp';
+modelName = 'etherCATmdlBasic';
 LibrarayNames = '';
 blockPaths = '';
 
