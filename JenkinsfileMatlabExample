@@ -12,7 +12,7 @@ pipeline {
             steps
             {
                runMATLABCommand 'ver'
-               //runMATLABCommand 'addpath("utilities"), 'setup_workspace'
+               runMATLABCommand 'addpath("utilities"), 'setup_workspace'
                runMATLABCommand 'extract_unresolved_links'
             }       
         } 
