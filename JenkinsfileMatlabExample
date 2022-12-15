@@ -1,9 +1,12 @@
 pipeline {
-   agent any
+   agent none
    tools {
        // use Matlab from Jenkins tool settings
        matlab 'Matlab R2022a'
    }
+   options {
+            buildDiscarder logRotator(artifactDaysToKeepStr: '3', artifactNumToKeepStr: '5', daysToKeepStr: '3', numToKeepStr: '5')
+    }
     stages{
         stage('Build: Run MATLAB Commands') {
             steps
